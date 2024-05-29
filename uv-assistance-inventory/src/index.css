@@ -139,7 +139,7 @@ select {
 }
 
 .body-diagram {
-  width: 25%; /* Adjust the size to what fits your layout */
+  width: 50%; /* Adjust the size to what fits your layout */
   height: auto; /* Maintain aspect ratio */
   display: block;
   margin: 20px auto; /* Center the image in the container */
@@ -156,12 +156,6 @@ select {
   position: relative;
 }
 
-.body-diagram {
-  width: 50%; /* Adjust as needed */
-  display: block;
-  margin: auto;
-}
-
 .selector {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -172,4 +166,59 @@ select {
   padding: 5px 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.dropzone {
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+.upload-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.file-info, .file-content {
+  margin-top: 20px;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.file-content pre {
+  white-space: pre-wrap; /* Maintains whitespace formatting */
+  word-wrap: break-word;
+}
+
+
+.analyze-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;  
+  margin: 20px auto;  
+}
+
+.analyze-button:hover {
+  background-color: #0056b3;  
+}
+
+.analysis-results {
+  margin-top: 20px;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
 }
