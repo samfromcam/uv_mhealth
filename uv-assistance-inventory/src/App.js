@@ -33,14 +33,14 @@ function App() {
       <div className="main-container">
         <div className="UploadData">
           <div className="title-box">
-            <h1 className='title-text'>1. Upload Your Data</h1>
+            <h1 className='title-text'>1. Upload Your UV data</h1>
           </div>
           <UploadData onFileUpload={handleFileUpload} />
         </div>
         
         <div className='DataInput'>
           <div className="title-box">
-            <h1 className='title-text'>2. Input Your Data</h1>
+            <h1 className='title-text'>2. Select Your Dressing</h1>
           </div>
           <DataInput onSelectionChange={handleSelectionChange} onDone={handleDone} />
         </div>
