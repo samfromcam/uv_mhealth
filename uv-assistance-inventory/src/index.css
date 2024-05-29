@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h2 {
+  margin: 20px 0;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+.upload-container {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.data-input-container {
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+.results-container {
+  width: 100%;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.result-item {
+  margin: 10px 0;
+}
+
+.title-container, .home-container {
+  width: 100%; /* Ensures these containers take the full width of their parent */
+  padding: 20px; /* Provides some spacing around the content */
+}
+
+.title-box {
+  background-color: #ffffff;
+  margin: 10px 0; /* Adds vertical space around each title box */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  text-align: center; /* Centers the text within the title box */
+}
+
+.box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Adds space below each box, separating it from the next title */
+}
+
+.title-text {
+  font-size: 20px; /* Adjust font size as necessary */
+  color: #333;
+  font-weight: bold;
+}
+
+/* Flexbox styling for aligning title and box */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the boxes and titles */
+  justify-content: flex-start; /* Aligns items to the start of the flex container */
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  gap: 20px;
+  background-color: #f4f4f9; /* Adjust background color as needed */
+}
+
+/* Individual component container styling */
+.UploadData, .DataInput, .ResultDisplay {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style adjustments for responsiveness */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+.body-diagram {
+  width: 25%; /* Adjust the size to what fits your layout */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 20px auto; /* Center the image in the container */
+}
+
+
+.data-input-container {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.body-container {
+  position: relative;
+}
+
+.body-diagram {
+  width: 50%; /* Adjust as needed */
+  display: block;
+  margin: auto;
+}
+
+.selector {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* You need to adjust 'top', 'left', or 'right' per selector to match body parts */
+}
+
+.selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
