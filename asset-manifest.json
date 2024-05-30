@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/uv_mhealth/static/css/main.72db4075.css",
+    "main.js": "/uv_mhealth/static/js/main.50562ba4.js",
+    "static/js/453.85fe028f.chunk.js": "/uv_mhealth/static/js/453.85fe028f.chunk.js",
+    "static/media/body_diagram.png": "/uv_mhealth/static/media/body_diagram.0ea35c0aeecc16ab4fe2.png",
+    "index.html": "/uv_mhealth/index.html",
+    "main.72db4075.css.map": "/uv_mhealth/static/css/main.72db4075.css.map",
+    "main.50562ba4.js.map": "/uv_mhealth/static/js/main.50562ba4.js.map",
+    "453.85fe028f.chunk.js.map": "/uv_mhealth/static/js/453.85fe028f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72db4075.css",
+    "static/js/main.50562ba4.js"
+  ]
+}
