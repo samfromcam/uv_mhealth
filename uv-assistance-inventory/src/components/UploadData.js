@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
-function UploadData() {
+function UploadData(props) { // Include props here to use them in the component
     const [fileContent, setFileContent] = useState('');
     const [fileName, setFileName] = useState('');
     const [fileUploaded, setFileUploaded] = useState(false);
@@ -19,13 +19,7 @@ function UploadData() {
             setFileUploaded(true);
         };
 
-        if (file) {
-            reader.readAsText(file);
-        } else {
-            console.log("Unsupported file type.");
-            setFileContent('Unsupported file type.');
-            setFileUploaded(false);
-        }
+        reader.readAsText(file);
     };
 
     const getUvIndexCategory = (uvIndex) => {
@@ -66,16 +60,24 @@ function UploadData() {
         const readings = fileContent.split(/\r\n|\n/).map(Number);
         const validReadings = readings.filter(num => !isNaN(num));
         const average = validReadings.reduce((a, b) => a + b, 0) / validReadings.length;
-        setAverageReading(average.toFixed(2));
-
         const uvIndex = (Math.sqrt(average) - Math.sqrt(Math.sqrt(average))).toFixed(2);
+
+        setAverageReading(average.toFixed(2));
         setUvIndexRange(uvIndex);
 
         const uvInfo = getUvIndexCategory(parseFloat(uvIndex));
         setUvIndexInfo(uvInfo);
 
-        // Clear the file content to hide it from the UI
-        setFileContent('');
+        // Pass UV data up to the parent component if function is available
+        if (props.onUvDataReceived) {
+            props.onUvDataReceived({
+                index: parseFloat(uvIndex),
+                category: uvInfo.category,
+                advice: uvInfo.advice
+            });
+        }
+
+        setFileContent(''); // Optionally clear the file content
     };
 
     const {getRootProps, getInputProps, isDragActive} = useDropzone({
@@ -102,13 +104,13 @@ function UploadData() {
             </div>}
             {averageReading && <div className="analysis-results">
                 <strong>Average Reading from the Sensor:</strong> {averageReading}
-                <br></br>
+                <br/>
                 <strong>UV Index range from the Sensor:</strong> {uvIndexRange}
             </div>}
             {uvIndexInfo.category && (
                 <div 
                     className="analysis-results"
-                    style={{ backgroundColor: uvIndexInfo.color.toLowerCase() }}  // Set background color based on UV index
+                    style={{ backgroundColor: uvIndexInfo.color.toLowerCase() }}
                 >
                     <strong>UV Index:</strong> {uvIndexRange} ({uvIndexInfo.color})
                     <p><strong>Category:</strong> {uvIndexInfo.category}</p>
