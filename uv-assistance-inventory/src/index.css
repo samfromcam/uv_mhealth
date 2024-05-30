@@ -142,7 +142,7 @@ select {
   width: 50%; /* Adjust the size to what fits your layout */
   height: auto; /* Maintain aspect ratio */
   display: block;
-  margin: 20px auto; /* Center the image in the container */
+  margin-left: 25%; /* Center the image in the container */
 }
 
 
@@ -222,3 +222,4 @@ select {
   padding: 10px;
   border-radius: 5px;
 }
+
