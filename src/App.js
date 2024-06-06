@@ -99,7 +99,7 @@ function App() {
       none: ["High risk", "High risk", "High risk", "High risk", "High risk"]
     },
     feet: {
-      shoes: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
+      shoes: ["safe", "low risk", "safe", "Moderate risk", "High risk"],
       sandals: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
       socks: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
       none: ["High risk", "High risk", "High risk", "High risk", "High risk"]
