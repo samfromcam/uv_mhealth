@@ -72,7 +72,7 @@ function App() {
 
   const riskData = {
     head: {
-      brimmedHat: ["safe", "Low risk", "Moderate risk", "Moderate risk", "High risk"],
+      brimmedHat: ["safe", "Low risk", "Low risk", "Moderate risk", "High risk"],
       baseballCap: ["Low risk", "Moderate risk", "Moderate risk", "High risk", "High risk"],
       bucketHat: ["Low risk", "Moderate risk", "Moderate risk", "High risk", "High risk"],
       beanie: ["low risk", "Moderate risk", "Moderate risk", "High risk", "High risk"],
@@ -80,7 +80,7 @@ function App() {
       none: ["High risk", "High risk", "High risk", "High risk", "Extreme risk"] // Example, adjust based on actual risk assessment
     },
     chest: {
-      tshirt: ["safe", "Moderate risk", "Moderate risk", "High risk", "High risk"],
+      tshirt: ["safe", "low risk", "low risk", "High risk", "High risk"],
       longsleeve: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
       uvshirt: ["safe", "safe", "safe", "safe", "safe"],
       swimshirt: ["Low risk", "Moderate risk", "Moderate risk", "High risk", "High risk"],
@@ -94,7 +94,7 @@ function App() {
     },
     legs: {
       pants: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
-      shorts: ["safe", "low risk", "low risk", "Moderate risk", "High risk"],
+      shorts: ["safe", "low risk", "Moderate risk", "Moderate risk", "High risk"],
       uvPants: ["safe", "safe", "safe", "safe", "safe"],
       none: ["High risk", "High risk", "High risk", "High risk", "High risk"]
     },
